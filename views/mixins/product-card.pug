@@ -2,10 +2,10 @@ mixin product-card(product)
 	.col-md-3
 		article.card
 			img.card-img-top(
-				src= product.image
-				alt= `Изображение ${product.name}`
+				src= product.image 
+				alt=`Изображение ${product.name}`
 			)
 			.card-body
 				h5.card-title= product.name
-				p.card-text= `Стоимость: ${product.price}`
+				p.card-text= `Стоимость: ${product.price}р.`
 				a.btn.btn-primary(href="#") Посмотреть товар

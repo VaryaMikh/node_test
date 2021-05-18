@@ -1,0 +1,34 @@
+section.mt-5(style="margin-bottom: 200px")
+	.container
+		h2.mb-3 Заказать обратный звонок
+		form(action="/api/request-call" method="get")
+			.row.justifuly-content-center
+				.col-md-5
+					.mb-3
+						label.form-label(for="name") Имя и фамилия
+						input.form-control(
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Иван Васильевич"
+							required
+						)
+					.mb-3
+						label.form-label(for="name") Емейл
+						input.form-control(
+							type="text"
+							id="email"
+							name="email"
+							placeholder="zack@facebook.com"
+							required
+						)
+					.mb-3
+						label.form-label(for="name") Телефон
+						input.form-control(
+							type="text"
+							id="phone"
+							name="phone"
+							placeholder="+7 (999) 999-99-99"
+							required
+						)
+					button.btn.btn-success.w-100(type="submit") Отправь заявку

@@ -1,14 +1,13 @@
 const { Telegraf } = require('telegraf');
 
-const bot = new Telegraf('1702054709:AAE-34k0MlIvrtq8RIKfS2tZ5IYZRzv5_6U');
+const bot = new Telegraf('1617804639:AAG4DlK6TR_6McP4bD7asbC0OEdfjiCSHy0');
 
 bot.start((ctx) => {
-    console.log('Context: ', ctx);
-    ctx.reply('Привет, мешок с костями!');
+	console.log('CTX ', ctx.update.message.chat);
+	ctx.reply('Привет, мешок с костями!');
 });
 
 bot.on('sticker', (ctx) => ctx.reply('👍'));
 bot.hears('hi', (ctx) => ctx.reply('Что тебе нужно, мешок с костями'));
 
 module.exports = bot;
-// bot.launch();
