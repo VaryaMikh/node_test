@@ -1,8 +1,10 @@
 extends layout/base.pug
 
 block content
-	section.p-5.mb-4.bg-light.rounded-3
-		.container.container-fluid.py-5
+	section.p-5.mb-4.bg-light.rounded-3(
+		style='background-image: url("/img/main-bg.jpg"); background-position: center;'
+	)
+		.container.container-fluid.py-5.text-light
 			h1.display-5.fw-bold= message
 			p.col-md-8.fs-4.pl-0
 				| Дрон, это не только ценный mech, но и возможность посмотреть на мир под другим углом, а также узнать больше о соседях по даче и квартире

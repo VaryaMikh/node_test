@@ -1,12 +1,12 @@
-section.mt-5(style="margin-bottom: 200px")
+section.mt-5.mb-5
 	.container
-		h2.mb-3 Заказать обратный звонок
-		form(action="/api/request-call" method="get")
-			.row.justifuly-content-center
-				.col-md-5
+		h2.mb-3.text-center Заказать обратный звонок
+		form.needs-validation(novalidate)
+			.row.justify-content-center
+				.col-3
 					.mb-3
 						label.form-label(for="name") Имя и фамилия
-						input.form-control(
+						input.form-control.w-100(
 							type="text"
 							id="name"
 							name="name"
@@ -15,7 +15,7 @@ section.mt-5(style="margin-bottom: 200px")
 						)
 					.mb-3
 						label.form-label(for="name") Емейл
-						input.form-control(
+						input.form-control.w-100(
 							type="text"
 							id="email"
 							name="email"
@@ -24,7 +24,7 @@ section.mt-5(style="margin-bottom: 200px")
 						)
 					.mb-3
 						label.form-label(for="name") Телефон
-						input.form-control(
+						input.form-control.w-100(
 							type="text"
 							id="phone"
 							name="phone"
@@ -32,3 +32,4 @@ section.mt-5(style="margin-bottom: 200px")
 							required
 						)
 					button.btn.btn-success.w-100(type="submit") Отправь заявку
+		

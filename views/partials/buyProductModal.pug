@@ -1,0 +1,65 @@
+#buyProductModal.modal.fade(
+	tabindex='-1' 
+	aria-labelledby='buyProductModal' 
+	aria-hidden='true'
+)
+	.modal-dialog
+		.modal-content
+			.modal-header
+				h5#exampleModalLabel.modal-title Вы почти у цели!
+				button.btn-close(
+					type='button' 
+					data-bs-dismiss='modal' 
+					aria-label='Close' 
+					onclick='closeModal()'
+				)
+			.modal-body
+				p.mb-2
+					span Название товара:
+					b= product.name
+
+				p.mb-2
+					span Итоговая цена:
+					b#finalPrice
+				form.needs-validation(novalidate)
+					.mb-3
+						label.form-label(for="name") Имя и фамилия
+						input.form-control.w-100(
+							type="text"
+							id="name"
+							name="name"
+							placeholder="Иван Васильевич"
+							required
+						)
+						.invalid-freeback Заполните это поле, пожалуйста
+					.mb-3
+						label.form-label(for="name") Емейл
+						input.form-control.w-100(
+							type="text"
+							id="email"
+							name="email"
+							placeholder="zack@facebook.com"
+							required
+						)
+						.invalid-freeback Заполните это поле, пожалуйста
+					.mb-3
+						label.form-label(for="name") Телефон
+						input.form-control.w-100(
+							type="text"
+							id="phone"
+							name="phone"
+							placeholder="+7 (999) 999-99-99"
+							required
+						)
+						.invalid-freeback Заполните это поле, пожалуйста
+
+			.modal-footer
+				button.btn.btn-secondary(
+					type='button' 
+					data-bs-dismiss='modal' 
+					onclick='closeModal()'
+				) Отмена
+				button.btn.btn-primary(
+					type='button'
+					onclick=`sendPurchaseRequest(${JSON.stringify(product)})`
+				) Заказать
